@@ -2,15 +2,13 @@ import { AlertTriangle } from "lucide-react"
 
 export function Disclaimer() {
   return (
-    <div className="mt-8 p-4 md:p-6 rounded-xl bg-muted/30 border border-border/50">
-      <div className="flex items-start gap-3">
-        <AlertTriangle className="h-5 w-5 text-yellow-500 flex-shrink-0 mt-0.5" />
-        <div>
-          <h4 className="font-semibold text-sm uppercase tracking-wider mb-2">Disclaimer</h4>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            This is a satirical data visualization project for entertainment and educational purposes only. Not
-            affiliated with any government agency. Data based on public news sources and historical patterns. Do not use
-            for actual decision-making. All political figures are used in satirical context.
+    <div className="w-full bg-yellow-500/10 border-b border-yellow-500/30">
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex items-center justify-center gap-2 text-center">
+          <AlertTriangle className="h-4 w-4 text-yellow-500 flex-shrink-0" />
+          <p className="text-xs md:text-sm text-yellow-500/90">
+            <span className="font-semibold">Satirical project for entertainment only.</span>{" "}
+            <span className="hidden sm:inline">Not affiliated with any government. Do not use for decision-making.</span>
           </p>
         </div>
       </div>

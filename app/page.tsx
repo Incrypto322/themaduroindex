@@ -10,10 +10,11 @@ import { EventTimeline } from "@/components/event-timeline"
 import { NewsHeadlines } from "@/components/news-headlines"
 import { LiveUpdates } from "@/components/live-updates"
 import { TelegramAlerts } from "@/components/telegram-alerts"
-import { ShareCard } from "@/components/share-card"
 import { HowItWorks } from "@/components/how-it-works"
 import { FAQSection } from "@/components/faq-section"
+import { Disclaimer } from "@/components/disclaimer"
 import { getMockTensionData } from "@/lib/tension-data"
+
 
 export default function HomePage() {
   const [tensionData, setTensionData] = useState(getMockTensionData())
@@ -29,6 +30,9 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Disclaimer banner at the very top */}
+      <Disclaimer />
+      
       <Header />
 
       <main className="container mx-auto px-4 py-8">
@@ -64,8 +68,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <ShareCard data={tensionData} />
+        <section className="mb-12">
           <TelegramAlerts />
         </section>
 
